@@ -3,42 +3,45 @@ using System.Collections;
 
 public class Pausa : MonoBehaviour {
 
-    private bool juegoPausado = false;
+    public bool juegoPausado = false;
     private bool mostrarMenu = false;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+        GameObject.Find("MenuPausa").GetComponent<Canvas>().enabled = false;
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-       if(Input.GetKeyDown(KeyCode.Escape)) pausar();
+       
+       if(Input.GetKeyDown(KeyCode.Escape) && GameObject.Find("Inventario").GetComponent<Inventario>().mostrarMenu == false) pausar();
 	}
 
-    private void pausar()
+    public void pausar()
     {
         juegoPausado = !juegoPausado;
-
+        
         if (juegoPausado)
         {
 
             Time.timeScale = 0;
-           // GameObject.Find("Main Camera").GetComponent(MouseLook).enabled = false;
-           // GameObject.Find("First Person Controller").GetComponent(MouseLook).enabled = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Girar>().enabled = false;
+            GameObject.FindGameObjectWithTag("Enemigo").GetComponent<AudioSource>().enabled = false;
+            Cursor.visible = true;
             mostrarMenu = true;
         }
         else
         {
             Time.timeScale = 1;
-          //  GameObject.Find("Main Camera").GetComponent(MouseLook).enabled = true;
-          //  GameObject.Find("First Person Controller").GetComponent(MouseLook).enabled = true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Girar>().enabled = true;
+            GameObject.FindGameObjectWithTag("Enemigo").GetComponent<AudioSource>().enabled = true;
+            Cursor.visible = false;
             mostrarMenu = false;
         }
 
-        if (mostrarMenu) GameObject.Find("MenuPausa").GetComponent<GUITexture>().enabled = true;
-        else GameObject.Find("MenuPausa").GetComponent<GUITexture>().enabled = false;
+        if (mostrarMenu) GameObject.Find("MenuPausa").GetComponent<Canvas>().enabled = true;
+         else GameObject.Find("MenuPausa").GetComponent<Canvas>().enabled = false;
 
     }
 }
