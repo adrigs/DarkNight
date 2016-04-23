@@ -24,10 +24,14 @@ public class Pausa : MonoBehaviour {
         
         if (juegoPausado)
         {
-
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Girar>().enabled = false;
-            GameObject.FindGameObjectWithTag("Enemigo").GetComponent<AudioSource>().enabled = false;
+            try
+            {
+                GameObject.FindGameObjectWithTag("Enemigo").GetComponent<AudioSource>().enabled = false;
+            }
+            catch (System.Exception e) { }
             Cursor.visible = true;
             mostrarMenu = true;
         }
@@ -35,7 +39,11 @@ public class Pausa : MonoBehaviour {
         {
             Time.timeScale = 1;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Girar>().enabled = true;
-            GameObject.FindGameObjectWithTag("Enemigo").GetComponent<AudioSource>().enabled = true;
+            try
+            {
+                GameObject.FindGameObjectWithTag("Enemigo").GetComponent<AudioSource>().enabled = true;
+            }
+            catch (System.Exception e) { } 
             Cursor.visible = false;
             mostrarMenu = false;
         }

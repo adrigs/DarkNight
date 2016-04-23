@@ -1,72 +1,72 @@
 fileFormatVersion: 2
-guid: c88ffe56dcd3d9d48a866c8dde1ee4fd
-timeCreated: 1459271659
+guid: 296ab8f447c16774f85db84179facfd5
+timeCreated: 1461353639
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: solo_viking:pCube15
-    100002: solo_viking:pCube16
-    100004: solo_viking:pCylinder5
-    100006: solo_viking:polySurface14
-    100008: solo_viking:polySurface18
-    100010: solo_viking:polySurface19
-    100012: solo_viking:polySurface21
-    100014: solo_viking:polySurface22
-    100016: solo_viking:polySurface23
-    100018: solo_viking:polySurface24
-    100020: solo_viking:polySurface25
-    100022: solo_viking:polySurface26
-    100024: solo_viking:polySurface27
-    100026: solo_viking:polySurface28
-    100028: solo_viking:viking_012:pCube1
-    100030: solo_viking:viking_012:pCube2
-    100032: solo_viking:viking_012:pCube5
-    100034: solo_viking:viking_012:pCube6
-    100036: solo_viking:viking_012:pCube7
-    100038: solo_viking:viking_012:pCylinder1
-    100040: solo_viking:viking_012:polySurface22
-    100042: solo_viking:viking_012:polySurface23
-    100044: solo_viking:viking_012:polySurface24
-    100046: solo_viking:viking_012:pPyramid1
-    100048: solo_viking:viking_012:pPyramid2
-    100050: solo_viking:viking_012:pPyramid3
-    100052: solo_viking:viking_012:pPyramid4
-    100054: solo_viking:viking_012:pSphere1
-    100056: solo_viking:viking_012:viking_07_segui_aqui:pCylinder1
-    100058: solo_viking:viking_012:viking_07_segui_aqui:pSphere1
-    100060: //RootNode
-    400000: solo_viking:pCube15
-    400002: solo_viking:pCube16
-    400004: solo_viking:pCylinder5
-    400006: solo_viking:polySurface14
-    400008: solo_viking:polySurface18
-    400010: solo_viking:polySurface19
-    400012: solo_viking:polySurface21
-    400014: solo_viking:polySurface22
-    400016: solo_viking:polySurface23
-    400018: solo_viking:polySurface24
-    400020: solo_viking:polySurface25
-    400022: solo_viking:polySurface26
-    400024: solo_viking:polySurface27
-    400026: solo_viking:polySurface28
-    400028: solo_viking:viking_012:pCube1
-    400030: solo_viking:viking_012:pCube2
-    400032: solo_viking:viking_012:pCube5
-    400034: solo_viking:viking_012:pCube6
-    400036: solo_viking:viking_012:pCube7
-    400038: solo_viking:viking_012:pCylinder1
-    400040: solo_viking:viking_012:polySurface22
-    400042: solo_viking:viking_012:polySurface23
-    400044: solo_viking:viking_012:polySurface24
-    400046: solo_viking:viking_012:pPyramid1
-    400048: solo_viking:viking_012:pPyramid2
-    400050: solo_viking:viking_012:pPyramid3
-    400052: solo_viking:viking_012:pPyramid4
-    400054: solo_viking:viking_012:pSphere1
-    400056: solo_viking:viking_012:viking_07_segui_aqui:pCylinder1
-    400058: solo_viking:viking_012:viking_07_segui_aqui:pSphere1
-    400060: //RootNode
+    100000: //RootNode
+    100002: solo_viking:pCube15
+    100004: solo_viking:pCube16
+    100006: solo_viking:pCylinder5
+    100008: solo_viking:polySurface14
+    100010: solo_viking:polySurface18
+    100012: solo_viking:polySurface19
+    100014: solo_viking:polySurface21
+    100016: solo_viking:polySurface22
+    100018: solo_viking:polySurface23
+    100020: solo_viking:polySurface24
+    100022: solo_viking:polySurface25
+    100024: solo_viking:polySurface26
+    100026: solo_viking:polySurface27
+    100028: solo_viking:polySurface28
+    100030: solo_viking:viking_012:pCube1
+    100032: solo_viking:viking_012:pCube2
+    100034: solo_viking:viking_012:pCube5
+    100036: solo_viking:viking_012:pCube6
+    100038: solo_viking:viking_012:pCube7
+    100040: solo_viking:viking_012:pCylinder1
+    100042: solo_viking:viking_012:polySurface22
+    100044: solo_viking:viking_012:polySurface23
+    100046: solo_viking:viking_012:polySurface24
+    100048: solo_viking:viking_012:pPyramid1
+    100050: solo_viking:viking_012:pPyramid2
+    100052: solo_viking:viking_012:pPyramid3
+    100054: solo_viking:viking_012:pPyramid4
+    100056: solo_viking:viking_012:pSphere1
+    100058: solo_viking:viking_012:viking_07_segui_aqui:pCylinder1
+    100060: solo_viking:viking_012:viking_07_segui_aqui:pSphere1
+    400000: //RootNode
+    400002: solo_viking:pCube15
+    400004: solo_viking:pCube16
+    400006: solo_viking:pCylinder5
+    400008: solo_viking:polySurface14
+    400010: solo_viking:polySurface18
+    400012: solo_viking:polySurface19
+    400014: solo_viking:polySurface21
+    400016: solo_viking:polySurface22
+    400018: solo_viking:polySurface23
+    400020: solo_viking:polySurface24
+    400022: solo_viking:polySurface25
+    400024: solo_viking:polySurface26
+    400026: solo_viking:polySurface27
+    400028: solo_viking:polySurface28
+    400030: solo_viking:viking_012:pCube1
+    400032: solo_viking:viking_012:pCube2
+    400034: solo_viking:viking_012:pCube5
+    400036: solo_viking:viking_012:pCube6
+    400038: solo_viking:viking_012:pCube7
+    400040: solo_viking:viking_012:pCylinder1
+    400042: solo_viking:viking_012:polySurface22
+    400044: solo_viking:viking_012:polySurface23
+    400046: solo_viking:viking_012:polySurface24
+    400048: solo_viking:viking_012:pPyramid1
+    400050: solo_viking:viking_012:pPyramid2
+    400052: solo_viking:viking_012:pPyramid3
+    400054: solo_viking:viking_012:pPyramid4
+    400056: solo_viking:viking_012:pSphere1
+    400058: solo_viking:viking_012:viking_07_segui_aqui:pCylinder1
+    400060: solo_viking:viking_012:viking_07_segui_aqui:pSphere1
     2300000: solo_viking:pCube15
     2300002: solo_viking:pCube16
     2300004: solo_viking:pCylinder5
@@ -144,12 +144,12 @@ ModelImporter:
     4300028: solo_viking:viking_012:pPyramid1
     4300030: solo_viking:viking_012:polySurface24
     4300032: solo_viking:polySurface14
-    4300034: solo_viking:polySurface18
-    4300036: solo_viking:polySurface21
-    4300038: solo_viking:polySurface22
-    4300040: solo_viking:polySurface19
-    4300042: solo_viking:pCube15
-    4300044: solo_viking:pCylinder5
+    4300034: solo_viking:pCylinder5
+    4300036: solo_viking:polySurface18
+    4300038: solo_viking:polySurface21
+    4300040: solo_viking:polySurface22
+    4300042: solo_viking:polySurface19
+    4300044: solo_viking:pCube15
     4300046: solo_viking:pCube16
     4300048: solo_viking:polySurface23
     4300050: solo_viking:polySurface24
@@ -157,7 +157,6 @@ ModelImporter:
     4300054: solo_viking:polySurface26
     4300056: solo_viking:polySurface27
     4300058: solo_viking:polySurface28
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -177,8 +176,7 @@ ModelImporter:
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths:
-    - solo_viking:polySurface19
+    extraExposedTransformPaths: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -214,10 +212,10 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: solo_viking:polySurface19
+    rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

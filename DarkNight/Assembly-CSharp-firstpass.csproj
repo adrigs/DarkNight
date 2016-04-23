@@ -64,11 +64,13 @@
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Carga.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Cojer.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Datos.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\EneAtaque.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\EneIA.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\EneVision.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Fps.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Girar.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Inventario.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Jugador.cs" />
@@ -78,6 +80,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\Objeto.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Pantalla.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Pausa.cs" />
+     <None Include="Assets\Standard Assets\fuentes\itlivesintheswamp.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
