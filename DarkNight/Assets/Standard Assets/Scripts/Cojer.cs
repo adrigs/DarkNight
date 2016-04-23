@@ -7,14 +7,60 @@ public class Cojer : MonoBehaviour {
     private RaycastHit hit;
     private float dist;
     private Ray ray;
+    public bool encendido = false;
+    Light luz;
+
+    void Awake()
+    {
+        luz = gameObject.GetComponent<Light>();
+        luz.enabled = false;
+    }
 	
 	
 	// Update is called once per frame
 	void Update () {
-	    
-        if(Input.GetKeyDown(KeyCode.E)) cojer();
+
+        if (Input.GetKeyDown(KeyCode.E)) cojer();
+        else if (Input.GetKeyDown(KeyCode.F)) encender();
+        if (encendido) alumbrar();
 	}
-    
+
+    public void encender()
+    {
+        if (!encendido)
+        {
+            luz.enabled = true;
+            encendido = true;
+        }
+        else
+        {
+            luz.enabled = false;
+            encendido = false;
+            
+        }
+    }
+
+    private void alumbrar()
+    {
+        Camera camera = gameObject.GetComponent<Camera>();
+        Cursor.lockState = CursorLockMode.Locked;
+        ray = camera.ScreenPointToRay(Input.mousePosition);
+        
+       
+        if (Physics.Raycast(ray, out hit))
+        {
+            obj = hit.transform;
+            if (hit.transform.tag == "Enemigo")
+            {
+                //Debug.Log(Vector3.Distance(obj.position,gameObject.transform.position) + " " + Input.mousePosition);
+               if(estaDist(30f) && !obj.GetComponent<EneIA>().muerto) hit.transform.gameObject.GetComponent<EneIA>().recibirDano();
+               
+            }
+        }
+
+
+    }
+
     private void cojer()
     {
         
@@ -26,19 +72,17 @@ public class Cojer : MonoBehaviour {
                
                if (estaDist(6f))
                {
-                   Objeto objeto = GameObject.FindGameObjectWithTag("Pick").GetComponent<Objeto>();
-                   GameObject objeto3d = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Pick"));
+                   Objeto objeto = obj.GetComponent<Objeto>();
+                   GameObject objeto3d = GameObject.Instantiate(obj.gameObject);
                    Destroy(objeto3d.GetComponent<Objeto>());
                    Destroy(objeto3d.GetComponent<Animator>());
                    Destroy(objeto3d.GetComponent<Rigidbody>());
                    Destroy(objeto3d.GetComponent<SphereCollider>());
-                   objeto3d.layer = LayerMask.NameToLayer("UI");
-                   objeto3d.AddComponent<CanvasRenderer>();//TODO
                    objeto3d.SetActive(false);
                    objeto.set3d(objeto3d);
                    gameObject.GetComponent<Jugador>().mochila.add(objeto);
-                   Destroy(GameObject.FindGameObjectWithTag("Pick"));
-                   Pantalla.setTexto("Has recojido una esfera");
+                   Destroy(obj.transform.gameObject);
+                   Pantalla.setTexto("Has recogido " + objeto.nombre);
                }
                else Debug.Log("No destruir");
           }

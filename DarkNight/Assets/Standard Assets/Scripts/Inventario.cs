@@ -14,6 +14,7 @@ public class Inventario : MonoBehaviour {
     public bool SubMenu = false;
     public bool SubObj = false;
     EventSystem cosa = EventSystem.current;
+    //Vector3 pos = GameObject.FindGameObjectWithTag("Player").transform.position;
     // Use this for initialization
     void Awake()
     {
@@ -63,9 +64,11 @@ public class Inventario : MonoBehaviour {
                 if (hijo.name == "Button_usar")
                 {              
                     hijo.gameObject.SetActive(true);
-                    
-                    cosa.SetSelectedGameObject(hijo.gameObject);
-                    
+                    try
+                    {
+                        cosa.SetSelectedGameObject(hijo.gameObject);
+                    }
+                    catch (System.Exception e) { }
                 }
                 else if (hijo.name == "Button_info")
                 {
@@ -143,9 +146,16 @@ public class Inventario : MonoBehaviour {
                 hijo.GetComponentsInChildren<Text>()[2].text = obj.descripcion;
                 obj.get3d().SetActive(true);
 
-                //gameObject.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
-                //gameObject.GetComponent<Canvas>().worldCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<Camera>();
-                //gameObject.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+                gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
+                gameObject.GetComponent<Canvas>().worldCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<Camera>();
+               // GameObject.Find("Edificio").SetActive(false);
+              //  gameObject.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + new Vector3(-2.5f,0.2f,0);
+              //  gameObject.transform.rotation = GameObject.FindGameObjectWithTag("Player").transform.rotation;
+               // obj.get3d().transform.position = gameObject.transform.position - new Vector3(0,0,0.5f);
+               // gameObject.transform.localScale = new Vector3(0.004f, 0.004f, 0.004f);
+                //Application.LoadLevelAdditive("Prueba");
+                
+                //GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(20,20,20);
                 break;
             }
         }
@@ -159,8 +169,11 @@ public class Inventario : MonoBehaviour {
             if (hijo.name == "SubMenu")
             {
                 hijo.gameObject.SetActive(false);
-                //gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+                gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+                gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
                 mochila.getObjetos()[0].get3d().SetActive(false);
+                //GameObject.Find("Edificio").SetActive(true);
+                //GameObject.FindGameObjectWithTag("Player").transform.position = pos;
                 break;
             }
         }

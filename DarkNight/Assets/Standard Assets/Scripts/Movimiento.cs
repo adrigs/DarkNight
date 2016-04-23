@@ -13,6 +13,7 @@ public class Movimiento : MonoBehaviour {
     float resistencia;
     Slider barra;
     GameObject obj;
+    Jugador peso ;
 
     void Awake()
     {
@@ -23,11 +24,17 @@ public class Movimiento : MonoBehaviour {
         puedeCorrer = true;
         obj = GameObject.FindGameObjectWithTag("BarraRest");
         barra = obj.GetComponent<Slider>();
+        peso = GetComponent<Jugador>();
+       
     }
 	
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        float lentitud = 1f;
+        if (peso.mochila.peso >= 30f) lentitud = 0.5f;
+        else if (peso.mochila.peso >= 20f) lentitud = 0.8f;
 
         resistencia = barra.value;
         if (resistencia == 100f)
@@ -63,6 +70,9 @@ public class Movimiento : MonoBehaviour {
         }
 
         if (!puedeCorrer) velocidad = 1f;
+        else velocidad *= lentitud;
+
+        Debug.Log(velocidad);
         Mover(h, v);
         
 	}
